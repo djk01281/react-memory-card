@@ -6,13 +6,13 @@ function Game(props) {
       <div>
         {cardArray.map((cardObject, ith) => {
           return (
-            <button
+            <div
               onClick={() => {
                 handleClick(cardObject, ith);
               }}
             >
               {cardObject.name}
-            </button>
+            </div>
           );
         })}
       </div>
