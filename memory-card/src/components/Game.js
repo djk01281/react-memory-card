@@ -1,9 +1,14 @@
 function Game(props) {
-  const cardArray = props.cardArray;
-  return cardArray.length > 0 ? (
-    <div>{cardArray[0].name}</div>
-  ) : (
-    <div>press button</div>
+  const { cardArray, handleClick } = props;
+
+  return (
+    <div>
+      <div>
+        {cardArray.map((cardObject) => {
+          return <button onClick={handleClick}>{cardObject.name}</button>;
+        })}
+      </div>
+    </div>
   );
 }
 export default Game;
