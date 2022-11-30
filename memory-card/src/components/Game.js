@@ -4,8 +4,16 @@ function Game(props) {
   return (
     <div>
       <div>
-        {cardArray.map((cardObject) => {
-          return <button onClick={handleClick}>{cardObject.name}</button>;
+        {cardArray.map((cardObject, ith) => {
+          return (
+            <button
+              onClick={() => {
+                handleClick(cardObject, ith);
+              }}
+            >
+              {cardObject.name}
+            </button>
+          );
         })}
       </div>
     </div>
